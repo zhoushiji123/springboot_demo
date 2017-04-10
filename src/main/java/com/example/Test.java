@@ -5,23 +5,21 @@ package com.example;
  */
 public class Test {
 
-     static int t;
-
-    static {
-        int t =1;
-    }
-
     public static void main(String[] args) {
-        Test inc = new Test();
-        int i = 0;
-        inc.fermin(i);
-    //    int x=i ++;
-        String a[] = new String[20];
 
-
+        int x = Test.get();
+        System.out.println(x);
     }
-    void fermin(int i){
-        i++;
+
+
+    public static int get(){
+        try {
+            return 1;
+        }catch (Exception e){
+            return 2;
+        }finally {
+            return  3;
+        }
     }
 
 
